@@ -1,0 +1,13 @@
+Yerel PHP 8.4 ve Chromium doğrulaması:
+PASS first-run setup and account creation
+PASS desktop/mobile site, gallery and navigation
+PASS authentication, CSRF and missing-record protection
+PASS photo upload, edit, persistent content and file deletion
+PASS services, site text, SEO, logo and hero image publishing
+PASS protected data cannot be read by direct PHP requests
+PASS one-time setup, password change and session revocation
+PASS no browser JavaScript errors
+PASS disguised non-image upload rejected and login attempt limit enforced
+PASS content persisted unchanged after PHP server restart
+
+Hostinger canlı hesabı ve DNS üzerinde doğrulama yapılmadı.

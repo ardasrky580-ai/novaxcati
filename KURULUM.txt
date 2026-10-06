@@ -1,0 +1,46 @@
+NOVAX — HOSTINGER KURULUMU
+
+Sadece domain satın almak site dosyalarını ve paneli çalıştırmaz. PHP destekli bir web hosting paketi alın. Hostinger Website Builder yerine özel PHP dosyaları yükleyebildiğiniz web hosting seçin. Bu paket Node.js, terminal veya ayrı MySQL veritabanı kurulumu istemez.
+
+1. İndirdiğiniz novax-hostinger.zip paketini bilgisayarınızda açın. İçindeki SITE-YUKLE.zip, Hostinger'a yükleyeceğiniz dosyadır. Paket kişisel anahtar veya hazır yönetici şifresi içermez.
+
+2. Hostinger hPanel'de hostinginize bir web sitesi ekleyin ve satın aldığınız domaini seçin. Hazır site oluşturucu/WordPress yerine özel dosya yükleme seçeneğini kullanın. Domain farklı bir hesaptaysa hostingin gösterdiği güncel nameserver veya DNS kayıtlarını kullanın. IP veya nameserver tahmin ederek girmeyin; hostinginizin gösterdiği değerleri kullanın. Mevcut e-posta kullanıyorsanız MX/TXT kayıtlarını koruyun. Domain bağlantısının yayılması zaman alabilir.
+
+3. Dosya Yöneticisi'nde bu domainin public_html klasörüne girin. Eski bir site varsa önce yedekleyin. Boş kurulumda Hostinger'ın varsayılan index.html/default.php dosyalarını kaldırın. SITE-YUKLE.zip dosyasını buraya yükleyip çıkarın. Sonuç public_html/index.php, public_html/admin.php, public_html/setup.php ve public_html/assets/ olmalıdır. Ek bir public_html/public_html veya SITE-YUKLE alt klasörü oluşmamalıdır. Gizli .htaccess dosyaları da çıkarılmalıdır. Çıkardıktan sonra yüklenen ZIP dosyasını silin.
+
+4. PHP sürümünü 8.2 veya daha yeni seçin (8.4 önerilir). GD ve mbstring eklentilerini etkinleştirin. PHP memory_limit en az 256M, upload_max_filesize en az 8M, post_max_size en az 10M olsun. Hosting SSL sertifikasını etkinleştirin ve HTTPS yönlendirmesini açın.
+
+5. https://SENIN-DOMAININ/setup.php adresine girin. Önce Hostinger Dosya Yöneticisi ile config.php dosyasını düzenleyin. return ['setup_key'=>'']; satırındaki boş tırnaklara yalnızca sizin bildiğiniz en az 24 karakterlik bir anahtar yazın ve kaydedin. Harf ve rakam kullanın; tırnak veya ters eğik çizgi kullanmayın. Bu dosyanın değiştirilmiş halini GitHub'a geri yüklemeyin. setup.php ekranına aynı anahtarı girin. Kullanıcı adınızı ve en az 12 karakterlik güçlü şifrenizi belirleyin. Şifre en fazla 72 bayt olabilir; Türkçe karakterler birden fazla bayt kullanabilir. Kurulum bir defa yapılır; tamamlandıktan sonra bu ekran yeni yönetici oluşturamaz.
+
+6. https://SENIN-DOMAININ/admin.php adresinden giriş yapın. Proje & fotoğraflar bölümünden gerçek iş görsellerinizi ekleyin. Hizmetler bölümünde verdiğiniz hizmetleri düzenleyin. İşletme & iletişim bölümünden telefon, WhatsApp, adres, bölge, saatler, marka/logo yazıları, sayfa metinleri ve Google arama başlığı/açıklamasını ayarlayın. Logo ve ana sayfa görselini aynı bölümde yükleyin. Kaydettiğiniz içerik, ziyaretçi sayfayı yenilediğinde görünür.
+
+7. Telefonda siteyi açın. Arama, WhatsApp, harita, proje detayları ve menüyü deneyin. Başlangıçtaki mimari çizimler temsili görseldir; gerçek tamamlanmış proje gibi sunmayın. Başlangıç telefonunu ve hizmet kapsamını kontrol edin. Google sıralaması veya arama sonucunun anında değişmesi garanti edilmez.
+
+PANEL ÖZELLİKLERİ
+- Proje/fotoğraf ekleme, düzenleme, silme ve kategori belirleme.
+- Hizmet ekleme, düzenleme, silme; sunuluyor/sunulmuyor durumu.
+- Telefon, WhatsApp, Google Haritalar, adres, çalışma saatleri.
+- Ana başlık, açıklama, hakkımızda ve ana bölüm başlıkları.
+- Marka yazıları, alt bilgi sloganı, logo ve ana sayfa görseli.
+- Google arama başlığı ve açıklaması.
+- Şifre değiştirme; değişiklik tüm eski oturumları geçersiz kılar.
+
+FOTOĞRAFLAR
+JPG/PNG/WebP, en fazla 8 MB ve 20 megapiksel. Sunucu fotoğrafı en fazla 1800 piksele küçültüp PNG olarak yeniden oluşturur; yüklenen dosya doğrudan yayınlanmaz ve EXIF bilgisi aktarılmaz. Telefon fotoğrafı yana dönüyorsa yüklemeden önce cihazınızda döndürüp kaydedin. Her proje bir fotoğraf içerir; aynı kategoriye birden fazla proje ekleyebilirsiniz.
+
+YEDEKLEME VE GÜNCELLEME
+İçerik ve yönetici hesabı storage/data.php dosyasında; fotoğraflar uploads/ klasöründe saklanır. Hostinger üzerinden düzenli tam site yedeği alın. Güncelleme yüklerken storage/data.php ve uploads/ içeriğini koruyun. Bu dosyaları silmek yönetici hesabınızı ve içeriklerinizi kaybettirir. Test verileri ve hazır yönetici hesabı bu pakette bulunmaz.
+Şifrenizi parola yöneticisine kaydedin. Unutursanız veri dosyasını silmeyin; içerikleri koruyan ayrı bir şifre kurtarma işlemi gerekir. Otomatik e-posta ile şifre sıfırlama bu pakette yoktur.
+
+SORUN GİDERME
+- Dosya indirme ekranı veya PHP kaynak kodu görünüyorsa PHP çalışmıyordur; hosting paketinizi/ayarınızı kontrol edin.
+- Domain başka sayfaya gidiyorsa DNS, domainin seçildiği site, public_html ve eski index.html dosyasını kontrol edin.
+- Kayıt yapılamıyorsa storage ve uploads klasörlerinin PHP kullanıcısı tarafından yazılabildiğini kontrol edin. Genel 777 izni vermeyin; Hostinger'ın varsayılan dosya sahibi/izin düzeltmesini kullanın.
+- Fotoğraf yüklenmiyorsa PHP GD, bellek ve yükleme limitlerini kontrol edin.
+- SSL yoksa yönetici hesabı oluşturma/giriş engellenir. HTTPS ile açın.
+- Çok fazla yanlış girişten sonra 15 dakika bekleyin.
+- Anahtarı panel şifresi olarak kullanmayın; yalnızca ilk kurulum içindir.
+
+DOĞRULAMA
+Bu paket yerel PHP 8.4 ve Chromium ortamında test edilmiştir. Hostinger hesabına yükleme, DNS değişikliği ve canlı domain kontrolü yapılmamıştır. Domain ve hosting hesabınıza erişim gerekmeden paket hazırlanmıştır.
+Kaynak tasarım: https://github.com/esen288/KKKK (92dc7af608a6e9f42c6813328fcad80dbb4d4417). Yerel sembol fontunun lisansı assets/FONT-LICENSE.txt dosyasındadır.
